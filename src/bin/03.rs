@@ -35,7 +35,8 @@ pub fn part_two(input: &str) -> Option<u32> {
         if group.len() < 3 {
             continue;
         }
-        let elves = group.iter()
+        let elves = group
+            .iter()
             .map(|x| HashSet::from_iter(x.chars()))
             .collect::<Vec<HashSet<_>>>();
         group.clear();
