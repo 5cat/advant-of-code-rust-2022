@@ -2,8 +2,8 @@ use std::collections::HashSet;
 
 fn naive(input: &str, start_of_packet_size: usize) -> Option<u32> {
     let mut found: Option<u32> = None;
-    for index in 0..input.len()-start_of_packet_size {
-        let window = &input[index..index+start_of_packet_size];
+    for index in 0..input.len() - start_of_packet_size {
+        let window = &input[index..index + start_of_packet_size];
         if window.chars().collect::<HashSet<_>>().len() == start_of_packet_size {
             found = Some(index as u32 + start_of_packet_size as u32);
             dbg!(window);
