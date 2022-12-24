@@ -198,7 +198,7 @@ pub fn part_two(input: &str) -> Option<usize> {
             .map(|x| tree.get_size(*x))
             .filter(|size| (total_space - (used_space - size)) >= update_space)
             .min()
-            .unwrap()
+            .unwrap(),
     )
 }
 
